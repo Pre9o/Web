@@ -7,11 +7,13 @@
   color: white;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 200px auto;
   background-color: #ff0000;
+  position: fixed;
+  left: 45%;
+  top: 20%;
+  transform: translate(-50%, -50%);
 }
 
 #message {
@@ -22,11 +24,11 @@
 </head>
 <body>
 
-<p id="question" style="font-size: 24px; font-weight: bold; text-align: center;">Quer sair comigo?</p>
-<p id="message"></p>
+<p id="question" style="font-size: 24px; font-weight: bold; text-align: center;">Valerie, a senhora gostaria de sair comigo no próximo fim de semana?</p>
+<p id="message" style="font-size: 24px; font-weight: bold; text-align: center;" ></p>
 
 <button class="button" onclick="moveButton(this)">Não</button>
-<button class="button" onclick="showMessage()" style="background-color: green; position: fixed; left: 300px;">Sim</button>
+<button class="button" onclick="showMessage()" style="background-color: green; position: fixed; left: 55%; top: 20%; transform: translate(-50%, -50%);">Sim</button>
 
 <script>
     function moveButton(x) {
@@ -38,7 +40,7 @@
     
     function showMessage() {
         var message = document.getElementById("message");
-        message.innerHTML = "Ótimo, entre em contato comigo!";
+        message.innerHTML = "Ótimo, entre em contato comigo! Ass: Rafael Carneiro Pregardier";
     }
 </script>
 </body>
