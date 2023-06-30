@@ -11,7 +11,7 @@
   font-size: 16px;
   background-color: #ff0000;
   position: fixed;
-  left: 45%;
+  left: 40%;
   top: 20%;
   transform: translate(-50%, -50%);
 }
@@ -19,6 +19,11 @@
 #message {
   margin-top: 20px;
   font-size: 24px;
+}
+
+#heart-container {
+  text-align: center;
+  margin-top: 200px; /* Ajuste o valor aqui para mover o coração para baixo */
 }
 </style>
 </head>
@@ -28,7 +33,10 @@
 <p id="message" style="font-size: 24px; font-weight: bold; text-align: center;" ></p>
 
 <button class="button" onclick="moveButton(this)">Não</button>
-<button class="button" onclick="showMessage()" style="background-color: green; position: fixed; left: 55%; top: 20%; transform: translate(-50%, -50%);">Sim</button>
+<button class="button" onclick="showMessage()" style="background-color: green; position: fixed; left: 60%; top: 20%; transform: translate(-50%, -50%);">Sim</button>
+
+<div id="heart-container">
+</div>
 
 <script>
     function moveButton(x) {
@@ -41,6 +49,25 @@
     function showMessage() {
         var message = document.getElementById("message");
         message.innerHTML = "Ótimo, entre em contato comigo! Ass: Rafael Carneiro Pregardier";
+        
+        var canvas = document.createElement("canvas");
+        canvas.width = 150;
+        canvas.height = 200;
+        var ctx = canvas.getContext("2d");
+        
+        ctx.beginPath();
+        ctx.moveTo(75, 40);
+        ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+        ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+        ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+        ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+        ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+        ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        
+        var container = document.getElementById("heart-container");
+        container.appendChild(canvas);
     }
 </script>
 </body>
