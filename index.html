@@ -22,6 +22,13 @@
     border-radius: 5px; /* Adiciona um raio de 5px nas bordas */
   }
 
+  #question, #message {
+    font-family: "Arial", sans-serif; /* Define a fonte do texto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto */
+    color: #ffffff; /* Define a cor do texto como branco */
+  }
+
   #message {
     margin-top: 20px;
     font-size: 24px;
@@ -35,8 +42,8 @@
 </head>
 <body>
 
-<p id="question" style="font-size: 24px; font-weight: bold; text-align: center; color:#ffffff">Valerie, a senhora gostaria de sair comigo no próximo fim de semana?</p>
-<p id="message" style="font-size: 24px; font-weight: bold; text-align: center; color: #ffffff;" ></p>
+<p id="question" style="font-size: 24px; font-weight: bold; text-align: center;">Valerie, a senhora gostaria de sair comigo no próximo fim de semana?</p>
+<p id="message" style="font-size: 24px; font-weight: bold; text-align: center;"></p>
 
 <button class="button" onclick="moveButton(this)">Não</button>
 <button class="button" onclick="showMessage()" style="background-color: rgb(24, 216, 24); position: fixed; left: 60%; top: 20%; transform: translate(-50%, -50%);">Sim</button>
