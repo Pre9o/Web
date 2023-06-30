@@ -1,0 +1,36 @@
+body {
+    background-color: #cd9dcd;
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #dd3636;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ffffff; /* Adiciona uma borda de 2px sólida na cor branca */
+    border-radius: 5px; /* Adiciona um raio de 5px nas bordas */
+  }
+
+  #question, #message {
+    font-family: "Arial", sans-serif; /* Define a fonte do texto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto */
+    color: #ffffff; /* Define a cor do texto como branco */
+  }
+
+  #message {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  #heart-container {
+    text-align: center;
+    margin-top: 200px; /* Ajuste o valor aqui para mover o coração para baixo */
+  }

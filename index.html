@@ -1,44 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    background-color: #cd9dcd;
-  }
-
-  .button {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    background-color: #dd3636;
-    position: fixed;
-    left: 40%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #ffffff; /* Adiciona uma borda de 2px sólida na cor branca */
-    border-radius: 5px; /* Adiciona um raio de 5px nas bordas */
-  }
-
-  #question, #message {
-    font-family: "Arial", sans-serif; /* Define a fonte do texto */
-    font-weight: bold; /* Define o peso da fonte como negrito */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto */
-    color: #ffffff; /* Define a cor do texto como branco */
-  }
-
-  #message {
-    margin-top: 20px;
-    font-size: 24px;
-  }
-
-  #heart-container {
-    text-align: center;
-    margin-top: 200px; /* Ajuste o valor aqui para mover o coração para baixo */
-  }
-</style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -51,42 +14,6 @@
 <div id="heart-container">
 </div>
 
-<script>
-    function moveButton(x) {
-        marginX = Math.floor(Math.random() * 600);
-        marginY = Math.floor(Math.random() * 600);
-
-        x.style.margin = marginY.toString() + 'px ' + marginX.toString() + 'px';
-    }
-    
-    function showMessage() {
-    var message = document.getElementById("message");
-    message.innerHTML = "Ótimo, entre em contato comigo! Ass: Rafael Carneiro Pregardier";
-    
-    var canvas = document.createElement("canvas");
-    canvas.width = 150;
-    canvas.height = 200;
-    var ctx = canvas.getContext("2d");
-    
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fillStyle = "red";
-    ctx.fill();
-    
-    ctx.strokeStyle = "white"; // Define a cor da borda como branca
-    ctx.lineWidth = 4; // Define a largura da borda como 4 pixels
-    ctx.stroke(); // Desenha a borda
-    
-    var container = document.getElementById("heart-container");
-    container.appendChild(canvas);
-}
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
